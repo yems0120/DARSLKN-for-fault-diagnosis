@@ -47,7 +47,7 @@ class SENet(nn.Module):
 
     def __init__(self, channels, ratio=1):
         """Initializes the class and sets the basic configurations and instance variables required."""
-        super(ARNet, self).__init__()
+        super(SENet, self).__init__()
         self.avg_pool = nn.AdaptiveAvgPool1d(1)
         self.fc = nn.Sequential(
             nn.Linear(channels, channels//ratio, False),
